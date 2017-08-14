@@ -279,10 +279,21 @@ height:30px;
     min-height: 60px;
 }
 
+
+
+#sidemenuToggle {
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 80;
+}
 .ui-navbar.top-ui-navbar {
     max-width: 100%;
     position: relative;
-    top: -50px;
+    top: -70px;
     padding: 10px 20px;
 }
 

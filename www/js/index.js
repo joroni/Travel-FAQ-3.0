@@ -97,7 +97,7 @@ var app = {
 			}
 		}
 		
-		//appUI.launchFirstScreen();
+		appUI.launchFirstScreen();
 		appUI.setUserScreen();		
 	},
     // Update DOM on a Received Event

@@ -20,9 +20,33 @@ if (navigator.userAgent.match(/(iPad.*|iPhone.*|iPod.*);.*CPU.*OS 7_\d/i)) {
         document.getElementById('ios7-statusbar-fix').style.display = 'block';
 }
 
+
+	$("#sidemenuToggle").toggle(function(){
+		if ($("#listPanel").hasClass("ui-panel-open")) {
+			$("#listPanel").panel("toggle");
+			$("#sidemenuToggle").show();
+		}	else {
+			$("#sidemenuToggle").hide();
+		}
+
+		if ($("#optionsPanel").hasClass("ui-panel-dismiss-open")) {
+			$("#sidemenuToggle").show();
+			$("#optionsPanel").panel("toggle");
+			
+		} else {
+			$("#sidemenuToggle").hide();
+		}
+	
+	
+	});
+
+
+
+
 appUI.slideCountries = function() {
 	if (appUI.blocked) return;
 	$("#listPanel").panel("toggle");
+	$("#sidemenuToggle").show();
 	/*var TheDivider = $('#allCountries a');
 	var li = TheDivider.next(':not(#allCountries a)');
 	li = li.next(':not(#allCountries a)').hide();*/
@@ -40,9 +64,7 @@ appUI.slideCountries = function() {
 appUI.slideOptions = function() {
 	if (appUI.blocked) return;
 	$("#optionsPanel").panel("toggle");
-	
-	
-	
+	$("#sidemenuToggle").show();
 }
 
 appUI.popAbout = function() {

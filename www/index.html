@@ -71,10 +71,10 @@
 				<!-- the coca-cola logo -->
 			 <div class="page-header" id="titlebar"></div>
              <div class="ui-navbar top-ui-navbar ui-corner-all">
-				<a class="nav-icon ui-btn ui-btn-left ui-icon-grid ui-btn-icon-notext ui-corner-all" onclick="appUI.leftHeaderButtonClick()" data-icon="grid" data-iconpos="notext" data-direction="reverse" id="leftHeaderButton"> <span class="navbar-toggler-icon"></span></a>
 				
+				<a class="nav-icon" onclick="appUI.leftHeaderButtonClick()" data-icon="grid" data-iconpos="notext" data-direction="reverse" id="leftHeaderButton"><i class="fa custom-menu"></i></a>
 				
-				<a class="nav-icon ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-right" href="#optionsPanel" data-icon="gear" data-iconpos="notext">Options</a>
+				<a class="nav-icon ui-btn-right" href="#optionsPanel" data-icon="gear" data-iconpos="notext"><i class="fa custom-more"></i></a>
 
 
 				<!-- the bar below the logo -->
@@ -170,6 +170,8 @@
 					</ul>
 				</div>
 			</div>
+
+			<div id="sidemenuToggle" style="display:none;"></div>
 
 			<div data-role="footer" data-position="fixed" data-theme="b" id="footer" data-tap-toggle="false">
 				<div class="footer-text">INTERNAL USE ONLY</div>
