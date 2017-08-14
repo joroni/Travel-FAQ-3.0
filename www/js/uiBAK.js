@@ -54,16 +54,12 @@ appUI.initialize = function() {
 	
 	$( "#updatePopupDialog").enhanceWithin().popup({history:false});
 	$( "#updatePopupDialog" ).popup('close');
-	//$( "#updatePopupDialog" ).hide();
 	
 	$( "#updateProgressDialog").enhanceWithin().popup({history:false});
 	$( "#updateProgressDialog" ).popup('close');	
-	//$(".updateBody").hide();
-	//$( "#updateProgressDialog" ).hide();	
 	
 	$( "#aboutDialog").enhanceWithin().popup({history:false});
-	$( "#aboutDialog" ).popup('close');	
-	//$( "#aboutDialog" ).hide();		
+	$( "#aboutDialog" ).popup('close');		
 	
 	
 	$( "#exitDialog").enhanceWithin().popup({history:false});
@@ -276,7 +272,7 @@ function checkConnection() {
     states[Connection.CELL_3G]  = 'Cell 3G connection';
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.CELL]     = 'Cell generic connection';
-    states[Connection.NONE]     = 'Offline';
+    states[Connection.NONE]     = 'No network connection';
 
     alert('Connection type: ' + states[networkState]);
 }
@@ -617,9 +613,9 @@ appUI.populateCountryDetails = function(countryCode) {
 					/*<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location">location</button>*/
 					officeLoc +='<div class="ui-show-map-container">';
 					
-					officeLoc +='<a href="#" class="btn btn-danger" onclick="openExtLink(\'' + mapLink + '\')">View Map</a>';
+					officeLoc +='<button href="#" class="ui-btn ui-shadow ui-corner-all  ui-btn-icon-left ui-icon-location ui-btn-inline" onclick="openExtLink(\'' + mapLink + '\')">View Map</button>';
 					if (mapDirLink) {
-						officeLoc +='&nbsp;&nbsp;&nbsp;<a href="#" class="btn btn-danger" onclick="openExtLink(\'' +  mapDirLink + '\')">Navigate</a>';
+						officeLoc +='&nbsp;&nbsp;&nbsp;<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-navigation ui-btn-inline" onclick="openExtLink(\'' +  mapDirLink + '\')">Navigate</button>';
 					}
 					officeLoc +='</div>';
 				}	
@@ -747,9 +743,9 @@ appUI.setUserScreen = function() {
 						appUI.launchFirstScreen(countryCode);
 					}
 				);
-				appUI.launchFirstScreen();
-			} else {
 				//appUI.launchFirstScreen();
+			} else {
+				appUI.launchFirstScreen();
 				return;				
 			}
 		}
@@ -777,7 +773,5 @@ appUI.gotoCurrentLocation = function() {
 		}
 	);	
 }
-
-
 
 
