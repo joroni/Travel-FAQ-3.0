@@ -10,10 +10,10 @@
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.ko.travelfaq"
         },
-        "cordova-plugin-whitelist": {
+        "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.ko.travelfaq"
         },
-        "cordova-plugin-network-information": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ko.travelfaq"
         }
     },
